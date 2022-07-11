@@ -1,0 +1,40 @@
+CREATE TABLE `admins` (
+  `cpf_admins` varchar(11) NOT NULL,
+  `nome_admins` varchar(40) NOT NULL,
+  `user_admins` varchar(45) NOT NULL,
+  `senha_admins` varchar(45) NOT NULL,
+  `email_admins` varchar(55) NOT NULL,
+  PRIMARY KEY (`cpf_admins`),
+  UNIQUE KEY `user_admins_UNIQUE` (`user_admins`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+
+
+CREATE TABLE `cadastro_ferramentas` (
+  `id_ferramenta` int NOT NULL AUTO_INCREMENT,
+  `desc_ferramenta` varchar(60) DEFAULT NULL,
+  `fabricante_ferramenta` varchar(30) DEFAULT NULL,
+  `voltagem_ferramenta` varchar(15) NOT NULL,
+  `part_number_ferramenta` varchar(25) NOT NULL,
+  `tamanho_ferramenta` varchar(20) NOT NULL,
+  `un_medida_ferramenta` varchar(15) NOT NULL,
+  `tipo_ferramenta` varchar(15) NOT NULL,
+  `material_ferramenta` varchar(15) NOT NULL,
+  `max_reserva_ferramenta` int NOT NULL,
+  PRIMARY KEY (`id_ferramenta`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+
+
+CREATE TABLE `tecnicos_responsaveis` (
+  `cpf_tecnicos` varchar(11) NOT NULL,
+  `nome_completo_tecnicos` varchar(40) NOT NULL,
+  `telefone_tecnicos` varchar(9) NOT NULL,
+  `turno_tecnicos` varchar(5) NOT NULL,
+  `equipe_tecnicos` varchar(30) NOT NULL,
+  PRIMARY KEY (`cpf_tecnicos`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+
+
+
